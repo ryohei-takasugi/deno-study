@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  app:
+    container_name: app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    stdin_open: true
+    ports:
+      - "127.0.0.1:80:80"
+    volumes:
+      - type: bind
+        source: "./"
+        target: "/root/projects"

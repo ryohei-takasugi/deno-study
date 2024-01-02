@@ -1,0 +1,13 @@
+{
+  "lock": false,
+  "tasks": {
+    "check": "deno fmt --check && deno lint && deno check **/*.ts && deno check **/*.tsx",
+    "start": "deno run -A sample.ts",
+    "test": "deno run -A persion_test.ts",
+    "weather": "deno run -A weather.ts 130000.json",
+    "update": "deno run -A -r https://fresh.deno.dev/update ."
+  },
+  "imports": {
+    "$std/": "https://deno.land/std@0.206.0/"
+  }
+}
